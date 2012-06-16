@@ -27,7 +27,7 @@
             .modal{
                 height:auto;
                 position:absolute;
-                
+
             }
             .modal-body{
                 max-height:100000px;
@@ -65,7 +65,7 @@
                 text-align:center;
 
             }
-             p
+            p
             {
                 color:#a4957f;
                 line-height:1.5em;
@@ -179,177 +179,191 @@
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="span3 offset1 sidebar">
-                    <div class="row">
-                        <div class="span3 navi">
-                            <a class="brand" href="#">ihasb33r</a>
-                            <ul>
-                                <li class="active"><a id="projects" href="#">Projects</a></li>
-                                <li><a id="artwork" href="#">Artwork</a></li>
-                                <!--<li><a href="#contact">About</a></li>-->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="span3 social">
-                            <ul>
-                                <li><a href="http://fb.com/ihasb33r" target="_black"><img  src="img/facebook.png"></a></li>
-                                <li><a href="http://twitter.com/ihasb33r" target="_black"><img  src="img/twitter.png"></a></li>
-                                <li><a href="http://illustration.ihasb33r.com" target="_black"><img  src="img/tumblr.png"></a></li>
-                                <!--      <li><a href=""><img  src="img/linkedin.png" target="_black"></a></li>-->
-                                <li><a href="http://ihasb33r.deviantart.com" target="_black"><img  src="img/deviantart.png"></a></li>
-                                <li><a href="https://plus.google.com/102267168887724134421" target="_black"><img src="img/gplus.png"></a></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="span3 about">
-                            <a href="mailto:bckdotgr@gmail.com" class="email">bckdotgr@gmail.com</a>
-                            <br>
-                            <a class="telephone" href="tel:+306989803711">+306989803711</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="projects_main" class="span8 main">
-                    <div class="row entry">
-                        <div class="span2 clearfix">
-                            <div class="empty">
-                                <a href="http://dtps-students.appspot.com" target="_blank">
-                                    <img src="img/dtpsstudents.jpg">
-                                </a>
-                            </div>
-
-                        </div>
-                        <div class="span5">
-                            <a href="http://dtps-students.appspot.com" target="_blank">
-                                <h1>Dtps Students</h1>
-                                <p>Appengine app for helping University of Piraeus students view their grades</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row entry">
-                        <div class="span2 clearfix">
-                            <div class="empty">
-                                <a href="http://ihasb33r.com/droidStudents" target="_blank">
-                                    <img src="img/mygrades.jpg"></a>
-                            </div>
-                        </div>
-                        <div class="span5">
-                            <a href="http://ihasb33r.com/droidStudents" target="_blank">
-                                <h1>My Grades</h1>
-                                <p>Android app for helping University of Piraeus students view their grades</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row entry">
-                        <div class="span2 clearfix">
-                            <div class="empty"><a href="http://bpdmilia.com" target="_blank"><img src="img/bpdmilia.jpg"></a></div>
-                        </div>
-                        <div class="span5">
-                            <a href="http://bpdmilia.com" target="_blank">
-                                <h1>Bpd Milia WebCatalog</h1>
-                                <p>Company Web catalog using picasa as storage and javascript for fetching images</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row entry">
-                        <div class="span2 clearfix">
-                            <div class="empty"><img src="img/FindSimilar.jpg"></div>
-                        </div>
-                        <div class="span5">
-                            <h1>My Grades</h1>
-                            <p>Java Application proof of concept for finding similar images</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="artwork_main" class="span8  main">
-                    <div class="row">
-                        <div class="span8 clearfix">
-                            <ul id="images">
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Le javascript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript">
-            //
-        $(document).ready(function(){
 
-                $("#projects").click( function (){
-                    $(".main").hide();
-                    $("#projects_main").show();
-                    });
-                var album_ID = "5673487614173551137";
-                $("#artwork").click( function (){
-                    $(".main").hide();
-                    $("#images").empty();
-                    $("#artwork_main").show();
-                    var json_Photo_URI = "https://picasaweb.google.com/data/feed/base/"
-                    + "user/"       +   "102267168887724134421"
-                    + "/albumid/"   +  "5673487614173551137" 
-                    + "?alt="       +   "json"
-                    + "&kind="      +   "photo"
-                    + "&hl="        +   "en_US"
-                    + "&fields="    +   "entry(media:group,id)"
-                    + "&thumbsize=" +   "220"
-                    + "&imgmax="    +   1600
-                    + "&callback=?";
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2765475-8']);
+            _gaq.push(['_setDomainName', 'ihasb33r.com']);
+            _gaq.push(['_trackPageview']);
 
-                    $.getJSON(json_Photo_URI,
-                        function(data){
-                        $.each(data.feed.entry, function(i,item){
-                            //Photo URL
-                            var photo_URL ;
-                            $.each(item.media$group.media$content, function(i,item){
-                                photo_URL = item.url;
-                                });
-                            //Thumbnail URL
-                            var photo_Thumb_URL ;
-                            $.each(item.media$group.media$thumbnail, function(i,item){
-                                //                        $.each(item.media$group.media, function(i,item){
-                                photo_Thumb_URL = item.url;
-                            });
-                                var photo_ID = item.id.$t;
-                                photo_ID = photo_ID.split('/')[11].split('?')[0];
-                                $('#images').append("<li><div class='empty'>  <a data-toggle='modal' class='photo' href='#"+photo_ID+"'><img src='" + photo_Thumb_URL + "'></a></div></li>");
-                                $('#images').append('<div class="modal hide" id="'+photo_ID+'">\
-  <div class="modal-header">\
-    <button type="button" class="close" data-dismiss="modal">×</button>\
-  </div>\
-  <div class="modal-body">\
-  <img src="'+photo_URL+'">\
-  </div>\
-</div>');
+            (function() {
+             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+             })();
+
+         </script>
+     </head>
+
+     <body>
+         <div class="container">
+             <div class="row">
+                 <div class="span3 offset1 sidebar">
+                     <div class="row">
+                         <div class="span3 navi">
+                             <a class="brand" href="#">ihasb33r</a>
+                             <ul>
+                                 <li class="active"><a id="projects" href="#">Projects</a></li>
+                                 <li><a id="artwork" href="#">Artwork</a></li>
+                                 <!--<li><a href="#contact">About</a></li>-->
+                             </ul>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="span3 social">
+                             <ul>
+                                 <li><a href="http://fb.com/ihasb33r" target="_black"><img  src="img/facebook.png"></a></li>
+                                 <li><a href="http://twitter.com/ihasb33r" target="_black"><img  src="img/twitter.png"></a></li>
+                                 <li><a href="http://illustration.ihasb33r.com" target="_black"><img  src="img/tumblr.png"></a></li>
+                                 <!--      <li><a href=""><img  src="img/linkedin.png" target="_black"></a></li>-->
+                                 <li><a href="http://ihasb33r.deviantart.com" target="_black"><img  src="img/deviantart.png"></a></li>
+                                 <li><a href="https://plus.google.com/102267168887724134421" target="_black"><img src="img/gplus.png"></a></li>
+                             </ul>
+
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="span3 about">
+                             <a href="mailto:bckdotgr@gmail.com" class="email">bckdotgr@gmail.com</a>
+                             <br>
+                             <a class="telephone" href="tel:+306989803711">+306989803711</a>
+                         </div>
+                     </div>
+                 </div>
+                 <div id="projects_main" class="span8 main">
+                     <div class="row entry">
+                         <div class="span2 clearfix">
+                             <div class="empty">
+                                 <a href="http://dtps-students.appspot.com" target="_blank">
+                                     <img src="img/dtpsstudents.jpg">
+                                 </a>
+                             </div>
+
+                         </div>
+                         <div class="span5">
+                             <a href="http://dtps-students.appspot.com" target="_blank">
+                                 <h1>Dtps Students</h1>
+                                 <p>Appengine app for helping University of Piraeus students view their grades</p>
+                             </a>
+                         </div>
+                     </div>
+                     <div class="row entry">
+                         <div class="span2 clearfix">
+                             <div class="empty">
+                                 <a href="http://ihasb33r.com/droidStudents" target="_blank">
+                                     <img src="img/mygrades.jpg"></a>
+                             </div>
+                         </div>
+                         <div class="span5">
+                             <a href="http://ihasb33r.com/droidStudents" target="_blank">
+                                 <h1>My Grades</h1>
+                                 <p>Android app for helping University of Piraeus students view their grades</p>
+                             </a>
+                         </div>
+                     </div>
+                     <div class="row entry">
+                         <div class="span2 clearfix">
+                             <div class="empty"><a href="http://bpdmilia.com" target="_blank"><img src="img/bpdmilia.jpg"></a></div>
+                         </div>
+                         <div class="span5">
+                             <a href="http://bpdmilia.com" target="_blank">
+                                 <h1>Bpd Milia WebCatalog</h1>
+                                 <p>Company Web catalog using picasa as storage and javascript for fetching images</p>
+                             </a>
+                         </div>
+                     </div>
+                     <div class="row entry">
+                         <div class="span2 clearfix">
+                             <div class="empty"><img src="img/FindSimilar.jpg"></div>
+                         </div>
+                         <div class="span5">
+                             <h1>My Grades</h1>
+                             <p>Java Application proof of concept for finding similar images</p>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div id="artwork_main" class="span8  main">
+                     <div class="row">
+                         <div class="span8 clearfix">
+                             <ul id="images">
+                             </ul>
+
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <!-- Le javascript
+         ================================================== -->
+         <!-- Placed at the end of the document so the pages load faster -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+         <script type="text/javascript">
+             //
+         $(document).ready(function(){
+
+                 $("#projects").click( function (){
+                     $(".main").hide();
+                     $("#projects_main").show();
+                     });
+                 var album_ID = "5673487614173551137";
+                 $("#artwork").click( function (){
+                     $(".main").hide();
+                     $("#images").empty();
+                     $("#artwork_main").show();
+                     var json_Photo_URI = "https://picasaweb.google.com/data/feed/base/"
+                     + "user/"       +   "102267168887724134421"
+                     + "/albumid/"   +  "5673487614173551137" 
+                     + "?alt="       +   "json"
+                     + "&kind="      +   "photo"
+                     + "&hl="        +   "en_US"
+                     + "&fields="    +   "entry(media:group,id)"
+                     + "&thumbsize=" +   "220"
+                     + "&imgmax="    +   1600
+                     + "&callback=?";
+
+                     $.getJSON(json_Photo_URI,
+                         function(data){
+                         $.each(data.feed.entry, function(i,item){
+                             //Photo URL
+                             var photo_URL ;
+                             $.each(item.media$group.media$content, function(i,item){
+                                 photo_URL = item.url;
+                                 });
+                             //Thumbnail URL
+                             var photo_Thumb_URL ;
+                             $.each(item.media$group.media$thumbnail, function(i,item){
+                                 //                        $.each(item.media$group.media, function(i,item){
+                                 photo_Thumb_URL = item.url;
+                             });
+                                 var photo_ID = item.id.$t;
+                                 photo_ID = photo_ID.split('/')[11].split('?')[0];
+                                 $('#images').append("<li><div class='empty'>  <a data-toggle='modal' class='photo' href='#"+photo_ID+"'><img src='" + photo_Thumb_URL + "'></a></div></li>");
+                                 $('#images').append('<div class="modal hide" id="'+photo_ID+'">\
+                                     <div class="modal-header">\
+                                     <button type="button" class="close" data-dismiss="modal">×</button>\
+                                     </div>\
+                                     <div class="modal-body">\
+                                     <img src="'+photo_URL+'">\
+                                     </div>\
+                                     </div>');
 
 
 
-                                //Photo Title
-                                var photo_Title = item.media$group.media$title.$t;
-                                });
-                            });
-                        });
-                });
-                $.getScript("js/bootstrap.min.js?callback=?");
-                //$(".photo").click(function (){
-//
- //                           var photoid =$(this).attr("href");
-  //                          $(photoid).modal("show");
-//
- //               });
-                </script>
-            </body>
-        </html>
+                                 //Photo Title
+                                 var photo_Title = item.media$group.media$title.$t;
+                                 });
+                         });
+                         });
+                 });
+                 $.getScript("js/bootstrap.min.js?callback=?");
+                 //$(".photo").click(function (){
+                 //
+                 //                           var photoid =$(this).attr("href");
+                 //                          $(photoid).modal("show");
+                 //
+                 //               });
+                 </script>
+             </body>
+         </html>
