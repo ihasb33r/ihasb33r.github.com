@@ -1,323 +1,355 @@
 
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Summary Page for Kostas Papakonstantinou</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Personal page for Konstantinos Papakonstantinou, aliases ihasb33r bck, contact info, development projects and artwork">
+        <meta name="author" content="Kostas PApakonstantinou">
 
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-    <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-        <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-            <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-                <head>
-                    <meta charset="utf-8" />
+        <!-- Le styles -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
+        <style>
+            .hide{
 
-                    <!-- Set the viewport width to device width for mobile -->
-                    <meta name="viewport" content="width=device-width" />
+                display:none;
+            }
+            body {
+                font-size:100%;
+                background-image:url("img/portofoliopattern2.png");
+            }
+            a:hover {
+                text-decoration:none;
+            }
+            .modal{
+                height:auto;
+                position:absolute;
+                
+            }
+            .modal-body{
+                max-height:100000px;
+            }
+            .modal-header{
+                border-bottom:none;
+            }
+            .empty {
+                padding:10px;
+                border-radius:200px;
+                border:2px dotted #938c7e;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                display: inline-block;
 
-                    <meta name="google-site-verification" content="SWl8_lCHhsb_FfEHC6BlGcmEaASsJbm7z2txLK6iOCE" />
-                    <title>Kostas Papakonstantinou Intro Page</title>
+            }
+            .empty img {
+                border-radius:200px;
 
-                    <!-- Included CSS Files -->
-                    <link rel="stylesheet" href="stylesheets/foundation.css">
-                    <link rel="stylesheet" href="stylesheets/app.css">
-<link href='http://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
+            }
+            .entry {
+                margin-top:2em;
+            }
+            h1{
+                margin-top:0.5em;
+                color:#c37522;
+                font-weight:normal;
+                font-family:"Droid Serif", serif;
+                font-style:italic;
+                font-size:1.5em;
+            }
+            .entry .span2 {
 
+                text-align:center;
 
-                    <!--[if lt IE 9]>
-                    <link rel="stylesheet" href="stylesheets/ie.css">
-                    <![endif]-->
-
-
-                    <!-- IE Fix for HTML5 Tags -->
-                    <!--[if lt IE 9]>
-                    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-                    <![endif]-->
-                    <style type="text/css">
-                        hr{
-                            border:dotted 2px #200800;
-                        }
-                        .item hr{
-                            border:dotted 1px #200800;
-                            margin-top:0px;
-                        }
-                        .top{
-                            border:dashed 1px #200800;
-                            background:url("images/patternmedium.jpg");
-                        }
-
-
-                        body {
-                            background:url("images/patternlight.jpg");
-                        }
-                        h1{
-                        color:#200800;
-                            font-family:"Chango";
-                            font-size:1.5em;
-                            margin-top:30px;
-                        }
-                        h2{
-                        color:#200800;
-                        color:#200800;
-                            padding:10px;
-                            font-family:"Droid Serif";
-                            font-size:1.5em;
-                        }
-                        h3{
-                            font-family:"Droid Serif";
-                            font-size:1.2em;
-                        }
-
-                        p{
-                            color:#200800;
-
-                        }
-
-                        .top p {
-                            font-style:italic;
-                            font-family:"Droid Sans", sans-serif;
-
-                            font-size:1.33em;
-
-                        }
-                        .category{
-                            background:url("images/patternmedium.jpg");
-                            border:dashed 1px #200800;
-                            border-radius:5px;
-
-                        }
-                        .main {
-                            border-radius:10px;
-                            margin-bottom:30px;
-                        }
-                        .wrapper {
-                          
-                            padding-top:40px;
-                            background-repeat:no-repeat;
-                            background-position:center top;
-                        }
-
-                        .item {
-                            margin-top:20px;
-                            background:url("images/patternmedium.jpg");
-                            border-radius:5px;
-                            border:dashed 1px #200800;
-                            text-align:center;
-                        }
-                        .unavailable {
-                            opacity:0.3;
-                        }
-                        .item img {
-                            width:90%;
-                            margin-top:10px;
-                            margin-bottom:20px;
-                        }
-                        .content{
-                            padding:10px;
-
-                        }
-                        .logo {
-                            padding-top:5px;
-                            margin-bottom:5px;
-                            text-align:center;
-                            
-                        }
-                        .telephone, .email {
-                        font-size:1.20em;
-                        font-family:"Chango";
-                        color:#200800;
-                        display:block;
-                        padding:5px;
-                        }
-                        .email{
-                        font-size:1.2em;
-                        }
-                        .item a {
-                            color:#30180a;
-                        color:#200800;
-                        }
-                        a.body {
-                            font-style:italic;
-                            color:#200800;
-                            text-decoration:none;
-                            font-family:"Droid Sans",sans-serif;
-                            font-size:1.2em;
-                        }
+            }
+             p
+            {
+                color:#a4957f;
+                line-height:1.5em;
+                font-size:0.75em;
+                font-weight:bold;
 
 
-                    </style>
-                    <script type="text/javascript">
+            }
+            .entry:hover {
+            }
+            .brand {
+                display:block;
 
-                        var _gaq = _gaq || [];
-                        _gaq.push(['_setAccount', 'UA-2765475-8']);
-                        _gaq.push(['_setDomainName', 'ihasb33r.com']);
-                        _gaq.push(['_trackPageview']);
+            }
+            .brand {
+                display:block;
+                font-size:2.2em;
+                font-family:"Ultra";
+                color:#684b61;
+            }
+            .navi ul {
+                padding-left:0px;
+                margin-left:0px;
+                margin-bottom:0px;
+                list-style:none;
+            }
+            .navi ul li {
+                padding-top:1.5em;
 
-                        (function() {
-                         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-                         })();
+            }
+            .navi ul li a {
+                font-family:"Ultra";
+                color:white;
+            }
+            .navi {
+                padding-top:2em;
+                text-align:center;
+                border-bottom-left-radius:40px;
+                border-bottom-right-radius:40px;
+                background:url("img/navstripe.png");
+                padding-bottom:2em;
+                border-left:1px solid #cec9c1;
+                border-bottom:1px solid #cec9c1;
+                border-right:1px solid #cec9c1;
+                -moz-box-shadow: 5px 5px 22px #9e9992;
+                -webkit-box-shadow: 5px 5px 22px #9e9992;
+                box-shadow: 5px 3px 22px #9e9992;
+            }
+            .social {
+                margin-top:2em;
+                text-align:center;
+            }
+            .social ul , #images{
+                text-align:center;
+                list-style:none;
+                padding-left:0px;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            #image {
+                margin-top:0px;
+            }
+            #images li {
+                display:inline-block;
+                width:200px;
+                margin-right:20px;
+                margin-top:10px;
+            }
+            .social li {
+                width:32px;
+                height:32px;
+                display:inline-block;
+                margin-right:10px;
+                margin-top:5px;
+            }
 
-</script>
+            .about  {
+                line-height:1.5em;
+                text-align:center;
+            }
 
-                </head>
+            @media (max-width: 979px) and (min-width: 768px){
+                .brand {
+                    font-size:1.7em;
+                }
 
-                <body>
+            }
+            @media (max-width: 767px){
+                body{
+                    padding-top:0px;
+                }
+                h1 {
+                    text-align:center;
+                }
+                .entry {
+                    margin-top:4em;
+                }
 
-                    <div class="container wrapper">
-                        <div class="row main top">
-                            <div class="four columns logo"><img src="images/beer.jpg"></div>
-                            <div class="seven columns">
-                                        <h1>Kostas Papakonstantinou</h1>
-                                        <hr>
-                                        <p>half greek half romanian , computer nerd, self proclaimed sociopath, I spend my time either automating a one time task , or sketching usually semiclad ladies</p>
-                                        <hr>
-                                        <a href="mailto:bckdotgr@gmail.com" class="email">bckdotgr@gmail.com</a>
-                                        <a class="telephone" href="tel:+306989803711">+306989803711</a>
-                            </div>
+            }
+
+        </style>
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="span3 offset1 sidebar">
+                    <div class="row">
+                        <div class="span3 navi">
+                            <a class="brand" href="#">ihasb33r</a>
+                            <ul>
+                                <li class="active"><a id="projects" href="#">Projects</a></li>
+                                <li><a id="artwork" href="#">Artwork</a></li>
+                                <!--<li><a href="#contact">About</a></li>-->
+                            </ul>
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="row ">
-                            <div class="four columns main">
-                                        <h2> Development &amp Projects</h2>
-                                        <hr>
-                                    <div class="row item">
-                                        <div class="twelve columns">
-                                            <a href="/droidStudents">  <img alt="Android app for helping University of Piraeus students view their grades" src="images/mygrades.jpg"></a>
-                                        </div>
-                                        <div class="eleven columns">
-                                        <hr>
-                                            <h3> <a href="/droidStudents">MyGrades</a> </h3>
-                                            <p><a class="body" href="/droidStudents">Android app for helping University of Piraeus students view their grades</a></p>
-                                        </div>
-                                    </div>
+                    <div class="row">
+                        <div class="span3 social">
+                            <ul>
+                                <li><a href="http://fb.com/ihasb33r" target="_black"><img  src="img/facebook.png"></a></li>
+                                <li><a href="http://twitter.com/ihasb33r" target="_black"><img  src="img/twitter.png"></a></li>
+                                <li><a href="http://illustration.ihasb33r.com" target="_black"><img  src="img/tumblr.png"></a></li>
+                                <!--      <li><a href=""><img  src="img/linkedin.png" target="_black"></a></li>-->
+                                <li><a href="http://ihasb33r.deviantart.com" target="_black"><img  src="img/deviantart.png"></a></li>
+                                <li><a href="https://plus.google.com/102267168887724134421" target="_black"><img src="img/gplus.png"></a></li>
+                            </ul>
 
-                                    <div class="row item">
-                                        <div class="twelve columns">
-                                            <a href="http://dtps-students.appspot.com"><img alt="Appengine app for helping University of Piraeus students view their grades" src="images/dtpsstudents.jpg"></a>
-                                        </div>
-                                        <div class="eleven columns">
-                                        <hr>
-                                            <h3><a href="http://dtps-students.appspot.com"> DTPS Students </a></h3>
-                                            <p><a class="body" href="http://dtps-students.appspot.com">Appengine app for helping University of Piraeus students view their grades</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="row item">
-                                        <div class="twelve columns">
-                                            <a href="https://github.com/ihasb33r/Find-Similar-Photo"><img alt="Java Application proof of concept for finding similar images" src="images/FindSimilar.jpg"></a>
-                                        </div>
-                                        <div class="eleven columns">
-                                        <hr>
-                                            <h3><a href="https://github.com/ihasb33r/Find-Similar-Photo"> Find Similar </a></h3>
-                                            <p><a class="body" href="https://github.com/ihasb33r/Find-Similar-Photo">Java Application proof of concept for finding similar images</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="row item">
-                                        <div class="twelve columns">
-                                            <a href="http://bpdmilia.com"><img alt="Company Web catalog using picasa as storage and javascript for fetching images" src="images/bpdmilia.jpeg"></a>
-                                        </div>
-                                        <div class="eleven columns">
-                                        <hr>
-                                            <h3><a href="http://bpdmilia.com"> BPD Milia website </a></h3>
-                                            <p><a class="body" href="http://bpdmilia.com">Company Web catalog using picasa as storage and javascript for fetching images</a></p>
-                                        </div>
-                                    </div>
-                                <!--
-                                <div class="row item unavailable">
-                                    <div class="four columns">
-                                        <a href="http://blog.ihasb33r.com"><img src="images/blog.jpg"></a>
-                                    </div>
-                                    <div class="six columns">
-                                        <h3> <a href="http://blog.ihasb33r.com">Blog</a> </h3>
-                                        <p><a class="body"href="http://blog.ihasb33r.com">Opinion blogging about things that amaze/amuse or otherwise entertain me</a></p>
-                                    </div>
-                                </div>
-                                -->
-                                <!--
-                                <div class="row item">
-                                    <div class="twelve columns">
-                                        <img src="">
-                                    </div>
-                                    <div class="six columns">
-                                        <h3> GitHub </h3>
-                                        <p>Opinion blogging about things that amaze/amuse or otherwise entertain me</p>
-                                    </div>
-                                </div>
-                                -->
-
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 about">
+                            <a href="mailto:bckdotgr@gmail.com" class="email">bckdotgr@gmail.com</a>
+                            <br>
+                            <a class="telephone" href="tel:+306989803711">+306989803711</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="projects_main" class="span8 main">
+                    <div class="row entry">
+                        <div class="span2 clearfix">
+                            <div class="empty">
+                                <a href="http://dtps-students.appspot.com" target="_blank">
+                                    <img src="img/dtpsstudents.jpg">
+                                </a>
                             </div>
 
-                            <div class="four columns main">
-                                <h2> Illustration & Artwork </h2>
-                                <hr>
-                                <div class="row item">
-                                    <div class="twelve columns">
-                                        <a href="http://illustration.ihasb33r.com"><img alt="Personal artwork showcase, tutorials, art related finds and activities"src="images/artblog.jpg"></a>
-                                    </div>
-                                    <div class="eleven columns">
-                                        <hr>
-                                        <h3> <a href="http://illustration.ihasb33r.com">ArtBlog</a> </h3>
-                                        <p><a class="body" href="http://illustration.ihasb33r.com">Personal artwork showcase, tutorials, art related finds and activities</a></p>
-                                    </div>
-                                </div>
-
-                                <div class="row item">
-                                    <div class="twelve columns">
-                                        <a href="http://society6.com/ihasb33r"><img alt="art prints, iphone and laptop stickers and more" src="images/society6.jpg"></a>
-                                    </div>
-                                    <div class="eleven columns">
-                                        <hr>
-                                        <h3> <a href="http://society6.com/ihasb33r">Society6 Store</a> </h3>
-                                        <p><a class="body" href="http://society6.com/ihasb33r">art prints, iphone and laptop stickers and more</a></p>
-                                    </div>
-
-                                </div>
-                                <div class="row item">
-                                    <div class="twelve columns">
-                                        <a href="http://ihasb33r.deviantart.com"><img alt="deviantart gallery" src="images/deviantart.jpg"></a>
-                                    </div>
-                                    <div class="eleven columns">
-                                        <hr>
-                                        <h3> <a href="http://ihasb33r.deviantart.com">DeviantArt Gallery</a> </h3>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="span5">
+                            <a href="http://dtps-students.appspot.com" target="_blank">
+                                <h1>Dtps Students</h1>
+                                <p>Appengine app for helping University of Piraeus students view their grades</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row entry">
+                        <div class="span2 clearfix">
+                            <div class="empty">
+                                <a href="http://ihasb33r.com/droidStudents" target="_blank">
+                                    <img src="img/mygrades.jpg"></a>
                             </div>
-                            <div class="four columns main">
-                                        <h2> Personal Places </h2>
-                                        <hr>
-                                <div class="row item">
-                                    <div class="twelve columns">
-                                        <a href="http://facebook.com/ihasb33r"><img alt="my facebook timeline" src="images/facebook.jpg"></a>
-                                    </div>
-                                    <div class="eleven columns">
-                                        <hr>
-                                        <h3> <a href="http://facebook.com/ihasb33r">Facebook</a> </h3>
-                                    </div>
-                                </div>
-                                <div class="row item">
-                                    <div class="twelve columns">
-                                        <a href="http://twitter.com/ihasb33r"><img alt="my twitter timeline" src="images/twitter.jpg"></a>
-                                    </div>
-                                    <div class="eleven columns">
-                                        <hr>
-                                        <h3> <a href="http://twitter.com/ihasb33r">Twitter</a> </h3>
-                                    </div>
-                                </div>
-                                <div class="row item">
-                                    <div class="twelve columns">
-                                        <a href="http://twitter.com/ihasb33r"><img alt="my google plus page" src="images/googleplus.jpg"></a>
-                                    </div>
-                                    <div class="eleven columns">
-                                        <hr>
-                                        <h3> <a href="https://plus.google.com/u/0/102267168887724134421/">Google+</a> </h3>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
+                        </div>
+                        <div class="span5">
+                            <a href="http://ihasb33r.com/droidStudents" target="_blank">
+                                <h1>My Grades</h1>
+                                <p>Android app for helping University of Piraeus students view their grades</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row entry">
+                        <div class="span2 clearfix">
+                            <div class="empty"><a href="http://bpdmilia.com" target="_blank"><img src="img/bpdmilia.jpg"></a></div>
+                        </div>
+                        <div class="span5">
+                            <a href="http://bpdmilia.com" target="_blank">
+                                <h1>Bpd Milia WebCatalog</h1>
+                                <p>Company Web catalog using picasa as storage and javascript for fetching images</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row entry">
+                        <div class="span2 clearfix">
+                            <div class="empty"><img src="img/FindSimilar.jpg"></div>
+                        </div>
+                        <div class="span5">
+                            <h1>My Grades</h1>
+                            <p>Java Application proof of concept for finding similar images</p>
                         </div>
                     </div>
                 </div>
 
-                </body>
-            </html>
+                <div id="artwork_main" class="span8  main">
+                    <div class="row">
+                        <div class="span8 clearfix">
+                            <ul id="images">
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            //
+        $(document).ready(function(){
+
+                $("#projects").click( function (){
+                    $(".main").hide();
+                    $("#projects_main").show();
+                    });
+                var album_ID = "5673487614173551137";
+                $("#artwork").click( function (){
+                    $(".main").hide();
+                    $("#images").empty();
+                    $("#artwork_main").show();
+                    var json_Photo_URI = "https://picasaweb.google.com/data/feed/base/"
+                    + "user/"       +   "102267168887724134421"
+                    + "/albumid/"   +  "5673487614173551137" 
+                    + "?alt="       +   "json"
+                    + "&kind="      +   "photo"
+                    + "&hl="        +   "en_US"
+                    + "&fields="    +   "entry(media:group,id)"
+                    + "&thumbsize=" +   "220"
+                    + "&imgmax="    +   1600
+                    + "&callback=?";
+
+                    $.getJSON(json_Photo_URI,
+                        function(data){
+                        $.each(data.feed.entry, function(i,item){
+                            //Photo URL
+                            var photo_URL ;
+                            $.each(item.media$group.media$content, function(i,item){
+                                photo_URL = item.url;
+                                });
+                            //Thumbnail URL
+                            var photo_Thumb_URL ;
+                            $.each(item.media$group.media$thumbnail, function(i,item){
+                                //                        $.each(item.media$group.media, function(i,item){
+                                photo_Thumb_URL = item.url;
+                            });
+                                var photo_ID = item.id.$t;
+                                photo_ID = photo_ID.split('/')[11].split('?')[0];
+                                $('#images').append("<li><div class='empty'>  <a data-toggle='modal' class='photo' href='#"+photo_ID+"'><img src='" + photo_Thumb_URL + "'></a></div></li>");
+                                $('#images').append('<div class="modal hide" id="'+photo_ID+'">\
+  <div class="modal-header">\
+    <button type="button" class="close" data-dismiss="modal">×</button>\
+  </div>\
+  <div class="modal-body">\
+  <img src="'+photo_URL+'">\
+  </div>\
+</div>');
+
+
+
+                                //Photo Title
+                                var photo_Title = item.media$group.media$title.$t;
+                                });
+                            });
+                        });
+                });
+                $.getScript("js/bootstrap.min.js?callback=?");
+                //$(".photo").click(function (){
+//
+ //                           var photoid =$(this).attr("href");
+  //                          $(photoid).modal("show");
+//
+ //               });
+                </script>
+            </body>
+        </html>
