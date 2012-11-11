@@ -180,8 +180,19 @@
                 box-shadow: inset -5px 0px 80px #000;
 
             }
+            .navi ul:hover .active{
+            background-image:none;
+            }
+            .navi ul:hover li.active:hover{
+                background-image:url("images/navarrow.png");
+                background-position:right center;
+                background-repeat:no-repeat;
+            }
             .navi ul li:hover {
                 background-color:rgba(0,0,0,0.3);
+                background-image:url("images/navarrow.png");
+                background-position:right center;
+                background-repeat:no-repeat;
 
             }
             .navi ul li.active {
@@ -193,6 +204,7 @@
             .navi ul li a {
                 font-family:"Ultra";
                 color:white;
+                display:block;
             }
             .navi {
                 padding:20px 0 0 20px;
@@ -252,11 +264,23 @@
                 background-image:none;
                 }
                 .sidebar {
+                    position:relative;
+                }
+                .avatar img {
+                    width:150px;
+
+                }
+                .avatar {
+
+                    text-align:center;
+                }
+                .project {
+                    display:inline-block;
+                    margin-right:5px;
                 }
                 #images li {
-
-                display:block;
-
+                    display:inline-block;
+                    margin-right:5px;
                 }
                 h1 {
                     text-align:left;
@@ -430,10 +454,14 @@
 
                  $("#projects").click( function (){
                      $(".main").hide();
+                     $(".active").removeClass("active");
+                     $(this).parent().addClass("active");
                      $("#projects_main").show();
                      });
                  var album_ID = "5673487614173551137";
                  $("#artwork").click( function (){
+                     $(".active").removeClass("active");
+                     $(this).parent().addClass("active");
                      $(".main").hide();
                      $("#images").empty();
                      $("#artwork_main").show();
