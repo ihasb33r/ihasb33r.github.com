@@ -12,6 +12,16 @@
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
         <style>
+            #menu-toggle {
+                color:white;
+                display:block;
+                height:20px;
+                text-align:center;
+                font-family:"Ultra";
+                padding:10px;
+                border-bottom:1px solid black;
+                background:rgba(0,0,0,0.5);
+            }
             .sidebar {
                 background-color:black;
                 background-image:url("images/sidebarbackground.png");
@@ -31,20 +41,25 @@
             ul.thumbnails {
                 margin-top:40px;
             }
-            ul.thumbnails li.span4 {
+            ul.thumbnails li.project {
                 background-color:rgba(255,255,255,0.4);
                 margin-left:0px;
-                margin-right:10px;
+                margin-right:20px;
                 min-height:330px;
+                width:200px;
+                box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+                border:1px solid gray;
+                padding:20px;
+                border-radius:5px;
             }
-            ul.thumbnails li.span4 div.thumbnail .img-wrapper{
+            ul.thumbnails li.project div.thumbnail .img-wrapper{
                 width:100%;
                 height:150px;
                 overflow:hidden;
                 border:1px solid #ccc;
             }
-            ul.thumbnails li.span4 div.thumbnail .img-wrapper img{
-                width:100%;
+            ul.thumbnails li.project div.thumbnail .img-wrapper img{
+                width:200px;
                 height:auto;
                 overflow:hidden;
                 border:1px solid #ccc;
@@ -63,6 +78,11 @@
             }
             ul.thumbnails div.thumbnail .img-wrapper img {
                 width:280px;
+            }
+
+
+            .img-wrapper {
+                text-align:center;
             }
             .hide{
 
@@ -122,11 +142,6 @@
                 font-family:"Droid Serif", serif;
                 font-style:italic;
                 font-size:1.5em;
-            }
-            .entry .span4 {
-
-                text-align:center;
-
             }
             p
             {
@@ -227,6 +242,9 @@
                 body{
                     padding-top:0px;
                 }
+                #menu {
+                    display:none;
+                }
                 .fullheight{
                 height:auto;
                 }
@@ -234,7 +252,6 @@
                 background-image:none;
                 }
                 .sidebar {
-                position:relative;
                 }
                 #images li {
 
@@ -287,6 +304,14 @@
          <div class="container-fluid fullheight">
              <div class="row-fluid fullheight">
                  <div class="span3 sidebar fullheight inner-right-shadow">
+                     <div class="row-fluid visible-phone">
+                         <div class="span12">
+                             <a href="#" id="menu-toggle">
+                             Menu
+                             </a>
+                         </div>
+                     </div>
+                     <div id="menu">
                      <div class="row-fluid">
                          <div class="span12 navi">
                              <div class="avatar img-circle">
@@ -325,47 +350,48 @@
                              <!--</div>-->
                          <!--</div>-->
                  </div>
+                 </div>
                  <div id="projects_main" class="span9 main">
                      <div class="row-fluid">
                          <div class="span12">
                              <ul class="thumbnails">
-                                 <li class="span4">
+                                 <li class="project">
                                  <div class="thumbnail">
                                      <a href="http://dtps-students.appspot.com" target="_blank">
                                      <div class="img-wrapper">
-                                         <img class="img-rounded" src="img/dtpsstudents.jpg">
+                                         <img src="img/dtpsstudents.jpg">
                                      </div>
                                          <h1>Dtps Students</h1>
                                          <p>Appengine app for helping University of Piraeus students view their grades</p>
                                      </a>
                                  </div>
                                  </li>
-                                 <li class="span4">
+                                 <li class="project">
                                  <div class="thumbnail">
                                      <a href="http://ihasb33r.com/droidStudents" target="_blank">
                                      <div class="img-wrapper">
-                                         <img class="img-rounded" src="img/mygrades.jpg">
+                                         <img  src="img/mygrades.jpg">
                                      </div>
                                          <h1>My Grades</h1>
                                          <p>Android app for helping University of Piraeus students view their grades</p>
                                      </a>
                                  </div>
                                  </li>
-                                 <li class="span4">
+                                 <li class="project">
                                  <div class="thumbnail">
                                      <a href="http://bpdmilia.com" target="_blank">
                                      <div class="img-wrapper">
-                                         <img class="img-rounded" src="img/bpdmilia.jpg">
+                                         <img  src="img/bpdmilia.jpg">
                                      </div>
                                          <h1>Bpd Milia WebCatalog</h1>
                                          <p>Company Web catalog using picasa as storage and javascript for fetching images</p>
                                      </a>
                                  </div>
                                  </li>
-                                 <li class="span4">
+                                 <li class="project">
                                  <div class="thumbnail">
                                      <div class="img-wrapper">
-                                     <img class="img-rounded" src="img/FindSimilar.jpg">
+                                     <img  src="img/FindSimilar.jpg">
                                  </div>
                                      <h1>Find Similar</h1>
                                      <p>Java Application proof of concept for finding similar images</p>
@@ -395,6 +421,12 @@
          <script type="text/javascript">
              //
          $(document).ready(function(){
+                 $("#menu-toggle").click(function (){
+
+                     $("#menu").toggle();
+
+                     });
+
 
                  $("#projects").click( function (){
                      $(".main").hide();
